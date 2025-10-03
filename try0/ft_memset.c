@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 16:17:36 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/01 17:21:02 by raulp            ###   ########.fr       */
+/*   Created: 2025/10/02 12:34:11 by raulp             #+#    #+#             */
+/*   Updated: 2025/10/02 14:08:38 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-
-int ft_isalpha(int n)
+void *ft_memset(void *dest, int c, size_t count)
 {
-	if((n >='a' && n <= 'z') || (n >='A' && n <= 'A'))
-		return (1);
-	return (0);
+char *p = (char *)dest;
+
+int	i= 0;
+while(i < count)
+{
+	p[i] = c;
+	i++;
+}
 }

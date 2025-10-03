@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 16:17:36 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/01 17:21:02 by raulp            ###   ########.fr       */
+/*   Created: 2025/10/02 15:16:04 by raulp             #+#    #+#             */
+/*   Updated: 2025/10/02 17:20:49 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-
-int ft_isalpha(int n)
+void *memmove(void *dest, const void *src, size_t n)
 {
-	if((n >='a' && n <= 'z') || (n >='A' && n <= 'A'))
-		return (1);
-	return (0);
+	
 }
