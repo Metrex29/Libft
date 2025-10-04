@@ -6,16 +6,15 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 16:17:36 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/01 17:21:02 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/04 11:23:42 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-
-int ft_isalpha(int n)
+int	ft_isalpha(int n)
 {
-	if((n >='a' && n <= 'z') || (n >='A' && n <= 'A'))
+	if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'A'))
 		return (1);
 	return (0);
 }

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/raulp/Github/Libft",
-      "program": "/home/raulp/Github/Libft/build/Debug/outDebug",
+      "cwd": "/home/raulp/Github/Libft/try0",
+      "program": "/home/raulp/Github/Libft/try0/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

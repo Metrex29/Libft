@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cpicon-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 10:14:27 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/09/30 10:14:30 by cpicon-m         ###   ########.fr       */
+/*   Updated: 2025/10/04 11:26:17 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,4 @@ int ft_isdigit(int c)
 		return (1);
 	else
 		return (0);
-}
-
-int main(void)
-{
-	#include <stdio.h>
-
-	int eje = 'r';
-
-	printf("%d", ft_isdigit(eje));
 }
