@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 10:16:45 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/04 11:25:35 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/06 14:19:35 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (0);
 }

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/04 19:14:49 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/04 19:41:03 by raulp            ###   ########.fr       */
+/*   Created: 2025/10/06 09:37:49 by raulp             #+#    #+#             */
+/*   Updated: 2025/10/06 09:51:48 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *buf, int c, size_t count)
+char *ft_strstr(const char *string1, const char *string2)
 {
-	unsigned char *buf_c = (unsigned char *) buf;
-	size_t i;
+	int i;
 
 	i = 0;
-	while (i < count)
+
+	while (string1[i])
 	{
-		if(buf_c[i] == c)
-			return (&buf_c[i]);
-		i++;
+		if(string1[i] == string2[i])
+			return ((char *)&string1[i]);
 	}
 	return NULL;
 }
