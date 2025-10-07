@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 16:25:25 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/06 16:55:19 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/06 18:35:30 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,18 @@
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int i;
-	
-	i=0;
+
+	i = 0;
 	char *p = malloc(len);
-	
-	while(s[i] < start)
+
+	while (i < start)
 		i++;
-	if(s[i] == start)
-	
+	if (i == start)
+	{
+		while (i < len)
+		{
+			p = s[i];
+		}
+	}
+	return NULL;
 }
