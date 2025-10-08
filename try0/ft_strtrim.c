@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 14:58:43 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/08 11:56:32 by raulp            ###   ########.fr       */
+/*   Created: 2025/10/08 11:07:04 by raulp             #+#    #+#             */
+/*   Updated: 2025/10/08 13:48:11 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
+	int ini;
+	int j;
+	int end;
+	ini = 0;
+	j = 0;
+	
+	end = ft_strlen(s1) -1;
+	while(s1[ini] && ft_strchr(set,s1[ini]))
+		ini++;
+	while(end >= ini && ft_strchr(set,s1[end]))
+		end --;
+	char *arrTrim = malloc(end-ini +2);
 
-	i=0;
-	while(s[i])
+	while(ini <= end)
 	{
-		if(s[i] == c)
-			return ((char *)&s[i]);
-		i++;
+		arrTrim[j] = s1[ini];
+		ini++; 
+		j++;
 	}
-	return NULL;
+	arrTrim[j] = '\0';
+	return arrTrim;
 }
