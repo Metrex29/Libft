@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 09:26:47 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/09 11:09:59 by raulp            ###   ########.fr       */
+/*   Created: 2025/10/09 12:09:23 by raulp             #+#    #+#             */
+/*   Updated: 2025/10/09 12:22:49 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+/**
+ * @brief Writes a character to the specified file descriptor.
+ *
+ * This function outputs the character 'c' to the file or stream
+ * represented by the file descriptor 'fd'.
+ *
+ * @param c  The character to write.
+ * @param fd The file descriptor to write to.
+ */
+void ft_putchar_fd(char c, int fd)
 {
-	unsigned int i;
-	char *new;
-
-	new = malloc(ft_strlen(s) + 1);
-	i = 0;
-
-	while (s[i])
-	{
-		new[i] = f(i, s[i]);
-		i++;
-	}
-	new[i] = '\0';
-	return new;
-}
-
-char tuUpper(unsigned int n, char c)
-{
-	if (c >= 97 && c <= 122)
-		return c - 32;
-	return c;
+	write(fd,&c,1);
 }

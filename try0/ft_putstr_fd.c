@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 09:26:47 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/09 11:09:59 by raulp            ###   ########.fr       */
+/*   Created: 2025/10/09 12:23:42 by raulp             #+#    #+#             */
+/*   Updated: 2025/10/09 12:26:08 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void ft_putstr_fd(char *s, int fd)
 {
-	unsigned int i;
-	char *new;
+	size_t i;
 
-	new = malloc(ft_strlen(s) + 1);
 	i = 0;
 
 	while (s[i])
 	{
-		new[i] = f(i, s[i]);
+		write(fd, &s[i], 1);
 		i++;
 	}
-	new[i] = '\0';
-	return new;
-}
-
-char tuUpper(unsigned int n, char c)
-{
-	if (c >= 97 && c <= 122)
-		return c - 32;
-	return c;
 }

@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/09 09:26:47 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/09 11:09:59 by raulp            ###   ########.fr       */
+/*   Created: 2025/10/09 10:57:28 by raulp             #+#    #+#             */
+/*   Updated: 2025/10/09 12:08:42 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void ft_striteri(char *s, void (*f)(unsigned int,
+char*))
 {
 	unsigned int i;
-	char *new;
-
-	new = malloc(ft_strlen(s) + 1);
+	
 	i = 0;
-
-	while (s[i])
+	
+	while(s[i])
 	{
-		new[i] = f(i, s[i]);
+		f(i,&s[i]);
 		i++;
 	}
-	new[i] = '\0';
-	return new;
+	
 }
 
-char tuUpper(unsigned int n, char c)
+void f (unsigned int i, char* a)
 {
-	if (c >= 97 && c <= 122)
-		return c - 32;
-	return c;
+	(void) i;
+	if (*a >= 'a' && *a <= 'z')
+		*a -= 32;
 }
