@@ -6,20 +6,17 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:00:28 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/06 14:51:48 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/09 01:28:45 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// esto pregunta al compilador, si esta o no definido aun.
 
 #ifndef LIBFT_H
 
-// si no lo esta lo define ahora.
 # define LIBFT_H
 #include <stddef.h>
 #include <stdlib.h>
 
-// funciones prototipos
 size_t ft_strlcat(char *dst, const char *src, size_t size);
 size_t ft_strlen(const char *s);
 size_t	strlcpy(char *dst, const char *src, size_t size);
