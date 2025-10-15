@@ -6,12 +6,11 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 09:26:47 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/09 11:09:59 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/14 13:26:13 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int i;

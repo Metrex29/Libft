@@ -6,11 +6,49 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 13:53:56 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/09 13:57:56 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/15 10:33:01 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
+/**
+ * @brief Writes an integer to the specified file descriptor.
+ *
+ * This function outputs the integer value 'n' as a sequence of characters
+ * to the file descriptor 'fd'. It handles negative numbers, including the
+ * edge case of the minimum representable integer (-2147483648), and writes
+ * the digits recursively. The function does not return a value.
+ *
+ * @param n  The integer to be written.
+ * @param fd The file descriptor to which the integer will be written.
+ */
+
 void ft_putnbr_fd(int n, int fd)
 {
-	if(n == -2147483648 )
+	char c;
+
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 12);
+		return;
+	}
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+	}
+	c = n % 10 + '0';
+	write(fd, &c, 1);
 }
+
+/* int main(void)
+{
+	int n = 1234;
+
+	ft_putnbr_fd(n, 1);
+} */
