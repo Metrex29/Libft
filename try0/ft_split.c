@@ -6,12 +6,23 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:36:09 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/15 10:33:50 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/15 14:51:22 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char **ft_split(char const *s, char c)
 {
+
+	int i;
+	int count;
+
+	while(s[i])
+	{
+	
+		if(s[i] == c)
+			i++;
+		if
+
+	}
 	
 }
-

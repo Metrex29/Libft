@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:44:56 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/09 09:26:42 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/15 11:55:30 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ char *ft_itoa(int n)
 		count++;
 		tmp *= -1;
 	}
-
 	while (tmp != 0)
 	{
 		tmp = tmp / 10;
@@ -51,6 +50,5 @@ char *ft_itoa(int n)
 		arr1[count] = n % 10 + '0';
 		n = n / 10;
 	}
-
 	return arr1;
 }

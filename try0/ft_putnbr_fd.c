@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 13:53:56 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/15 10:33:01 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/15 11:53:55 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
  * @param fd The file descriptor to which the integer will be written.
  */
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char c;
 
