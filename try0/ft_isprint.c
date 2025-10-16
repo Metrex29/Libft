@@ -6,9 +6,11 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 10:50:10 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/08 16:29:59 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/16 12:32:10 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /**
  * @brief Checks if a character is printable.

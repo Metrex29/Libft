@@ -6,13 +6,13 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 09:37:49 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/06 09:51:48 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/16 17:23:48 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strstr(const char *string1, const char *string2)
+char *ft_strnstr(const char *string1, const char *string2)
 {
 	int i;
 

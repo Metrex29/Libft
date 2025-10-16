@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 12:34:11 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/04 11:22:00 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/16 15:02:30 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@ void *ft_memset(void *dest, int c, size_t count)
 {
 	char *p = (char *)dest;
 
-	int i = 0;
+	size_t i = 0;
 	while (i < count)
 	{
 		p[i] = c;
 		i++;
 	}
+	return (dest);
 }

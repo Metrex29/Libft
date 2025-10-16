@@ -6,11 +6,12 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 09:26:47 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/14 13:26:13 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/16 16:45:45 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int i;
@@ -28,9 +29,4 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return new;
 }
 
-char tuUpper(unsigned int n, char c)
-{
-	if (c >= 97 && c <= 122)
-		return c - 32;
-	return c;
-}
+

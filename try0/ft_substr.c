@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 16:25:25 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/08 10:35:36 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/16 16:44:35 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int i;
-	int j;
+	unsigned i;
+	size_t j;
 	size_t arr1;
 
 	i = 0;

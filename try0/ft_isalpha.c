@@ -6,11 +6,11 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 16:17:36 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/04 11:23:42 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/16 12:17:35 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isalpha(int n)
 {

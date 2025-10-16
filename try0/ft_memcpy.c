@@ -6,12 +6,11 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:10:21 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/08 16:29:09 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/16 12:40:28 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// SE PUEDE COMENTARRRR
 /**
  * If the value of 'tmp' is negative, increments the 'count' variable and
  * converts 'tmp' to its positive equivalent.
