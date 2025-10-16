@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:44:56 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/15 19:57:34 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/16 11:08:06 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,18 @@ char *ft_itoa(int n)
 		arr1[0] = '-';
 		n *= -1;
 	}
-	while (count > 0)
+	put_end_start(arr1, count, n);
+	return arr1;
+}
+
+static int put_end_start(char *s, int i, int n)
+{
+	while (i > 0)
 	{
-		count--;
-		if (arr1[count] == '-')
+		i--;
+		if (s[i] == '-')
 			break;
-		arr1[count] = n % 10 + '0';
+		s[i] = n % 10 + '0';
 		n = n / 10;
 	}
-	return arr1;
 }
