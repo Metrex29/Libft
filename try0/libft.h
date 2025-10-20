@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:00:28 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/16 17:23:43 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/20 11:19:00 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ size_t ft_strlen(const char *s);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);
-char *ft_strnstr(const char *string1, const char *string2);
+char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char *ft_strtrim(char const *s1, char const *set);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 int ft_tolower(int c);

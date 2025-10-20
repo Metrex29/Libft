@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 12:02:28 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/16 12:16:12 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/20 16:25:23 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@
  *   semantics of malloc/calloc on zero-size allocations (an implementation-
  *   defined pointer which may be NULL may be returned).
  */
-void *ft_calloc(size_t number, size_t size)
-{
-	void *ptr;
-	
-	ptr = malloc(number * sizeof(ptr));
-	ft_memset(ptr,'0',number * size);
-	return ptr;	
-}
+	void *ft_calloc(size_t number, size_t size)
+	{
+		void *ptr;
+		
+		ptr = malloc(number * sizeof(ptr));
+		ft_memset(ptr,'\0',number * size);
+		return ptr;	
+	}
 

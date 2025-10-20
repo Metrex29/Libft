@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 09:37:49 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/16 17:23:48 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/20 11:18:35 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *string1, const char *string2)
+
+char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int i;
+    size_t i;
+    size_t j;
 
-	i = 0;
+    i = 0;
+    if (!*needle)
+        return ((char *)haystack);
 
-	while (string1[i])
-	{
-		if(string1[i] == string2[i])
-			return ((char *)&string1[i]);
-	}
-	return NULL;
+    while (i < len && haystack[i])
+    {
+        j = 0;
+        while (i + j < len && haystack[i + j] == needle[j] && needle[j])
+            j++;
+        if (!needle[j])
+            return ((char *)&haystack[i]);
+        i++;
+    }
+    return NULL;
 }
+

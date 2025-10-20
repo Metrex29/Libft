@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 19:14:49 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/16 12:37:10 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/20 16:20:11 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,12 @@ void	*ft_memchr(const void *buf, int c, size_t count)
 	size_t i;
 
 	i = 0;
+	
+	if(c == '\0')
+		return NULL;
 	while (i < count)
 	{
-		if(buf_c[i] == c)
+		if(buf_c[i] == (unsigned char)c)
 			return (&buf_c[i]);
 		i++;
 	}
