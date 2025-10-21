@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 09:22:26 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/16 12:39:28 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/20 19:35:38 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,14 @@
  *   is not accessible for reading.
  * - Time complexity is O(n).
  */
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *s1c = (unsigned char *)s1;
-	unsigned char *s2c = (unsigned char *)s2;
+	unsigned char	*s1c;
+	unsigned char	*s2c;
+	size_t			i;
 
-	size_t i;
-
+	s1c = (unsigned char *)s1;
+	s2c = (unsigned char *)s2;
 	i = 0;
 	while (i < n)
 	{

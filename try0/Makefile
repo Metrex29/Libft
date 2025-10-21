@@ -6,43 +6,80 @@
 #    By: raulp <raulp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 14:34:45 by raulp             #+#    #+#              #
-#    Updated: 2025/10/20 11:13:49 by raulp            ###   ########.fr        #
+#    Updated: 2025/10/21 12:31:00 by raulp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME    = libft.a
 
-LIB = ar rcs
-RM = rm -f
+CC      = gcc
+CFLAGS = -Wall -Wextra -Werror -fPIC
 
-CC = gcc
-CCFLAGS = -Wall -Wextra -Werror
 
-NAME = libft.a
-SRC =	ft_memset.c ft_bzero.c ft_strlen.c ft_atoi.c ft_isdigit.c ft_isalpha.c\
-ft_isprint.c ft_isascii.c ft_isalnum.c ft_memchr.c ft_memcpy.c \
-ft_memcmp.c ft_memmove.c ft_strchr.c ft_strdup.c ft_strlcat.c ft_strlcpy.c\
-ft_strncmp.c ft_toupper.c ft_tolower.c ft_strnstr.c ft_strrchr.c ft_calloc.c\
-ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c ft_substr.c\
-ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_itoa.c ft_split.c 
-OBJ = $(SRC:.c=.o)
-INCLUDE = libft.h
+bonus: all
 
+so: $(OBJS)
+	$(CC) -shared -o libft.so $(OBJS)
+AR      = ar
+ARFLAGS = rcs
+RM      = rm -f
+
+SRCS    = ft_isalpha.c \
+          ft_isdigit.c \
+          ft_isalnum.c \
+          ft_isascii.c \
+          ft_isprint.c \
+          ft_strlen.c \
+          ft_memset.c \
+          ft_bzero.c \
+          ft_memcpy.c \
+          ft_memmove.c \
+          ft_strlcpy.c \
+          ft_strlcat.c \
+          ft_toupper.c \
+          ft_tolower.c \
+          ft_strchr.c \
+          ft_strrchr.c \
+          ft_strncmp.c \
+          ft_memchr.c \
+          ft_memcmp.c \
+          ft_strnstr.c \
+          ft_atoi.c \
+          ft_calloc.c \
+          ft_strdup.c \
+          ft_substr.c \
+          ft_strjoin.c \
+          ft_strtrim.c \
+          ft_split.c \
+          ft_itoa.c \
+          ft_strmapi.c \
+          ft_striteri.c \
+          ft_putchar_fd.c \
+          ft_putstr_fd.c \
+          ft_putendl_fd.c \
+          ft_putnbr_fd.c
+
+OBJS    = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(OBJ)
-
-bonus: $(OBJ) $(BONUSOBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(BONUSOBJ) $(OBJ)
+# Regla .c -> .o (¡OJO: TAB al inicio!)
 
 %.o: %.c
-	$(CC) $(CCFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -I . -c $< -o $@
+
+
+# Crear la librería estática (no usar gcc aquí)
+$(NAME): $(OBJS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+# En macOS podría añadirse:  ranlib $(NAME)
 
 clean:
-	$(RM) $(OBJ) $(BONUSOBJ)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

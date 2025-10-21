@@ -6,17 +6,19 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 12:34:11 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/16 15:02:30 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/20 19:52:19 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *dest, int c, size_t count)
+void	*ft_memset(void *dest, int c, size_t count)
 {
-	char *p = (char *)dest;
+	char	*p;
+	size_t	i;
 
-	size_t i = 0;
+	i = 0;
+	p = (char *)dest;
 	while (i < count)
 	{
 		p[i] = c;

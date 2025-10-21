@@ -6,21 +6,20 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 12:23:42 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/09 12:26:08 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/20 18:29:38 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-
 	while (s[i])
 	{
-		write(fd, &s[i], 1);
+		write (fd, &s[i], 1);
 		i++;
 	}
 }

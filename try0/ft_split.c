@@ -6,24 +6,16 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:36:09 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/20 11:44:51 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/21 10:55:41 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+static int ft_count_word(char const *s, char c)
 {
-
 	int i;
-	int j;
 	int count;
-
-	i = 0;
-	j = 0;
-	count = 0;
-	char **resul;
-
 	while (s[i])
 	{
 		// con esto tengo el contador de palabras.
@@ -36,13 +28,32 @@ char **ft_split(char const *s, char c)
 				i++;
 		}
 	}
-	// reservar espacio para las palarbas, mas el nulo
-	resul = malloc((count + 1) * sizeof(char *));
-	// reutilizo variables;
+	return (count);
+}
 
+
+char **ft_split(char const *s, char c)
+{
+
+	int i;
+	int j;
+	int count_word;
+
+	char **resul;
+	i = 0;
+	j = 0;
+
+	if(!s)
+		return (NULL);
+
+	count_word = ft_count_word(s, c);
+	
+	resul = malloc((count_word + 1) * sizeof(char *));
+	if(!resul)
+		return NULL;
 	i = 0;
 	// aqui empiezo a copiar las partes a las memorias asaignadas;
-	while (s[i] && j < count)
+	while (s[i] && j < count_word)
 	{
 		while (s[i] == c)
 			i++;
@@ -50,35 +61,33 @@ char **ft_split(char const *s, char c)
 		{
 			int start = i;
 			int len = 0;
-
 			while (s[i] && s[i] != c)
 			{
 				i++;
 				len++;
 			}
-			resul[j] = malloc(len);
-			ft_strlcpy(resul[j], &s[start],len +1);
+			resul[j] = malloc(len + 1);
+			ft_strlcpy(resul[j], &s[start], len + 1);
 			j++;
 		}
 	}
 	resul[j] = NULL;
 
-	return resul;
-	free(resul);
 	
+	return resul;
 }
-/* 
-#include <stdio.h>
+
+/* #include <stdio.h>
 
 int main(void)
 {
 	char arr1[] = "hola que tal estas";
 	char **resul = ft_split(arr1, ' ');
 
- int i = 0;
-    while (resul[i] != NULL)
-    {
-        printf("%s\n", resul[i]);
-        i++;
-    }}
-  */
+	int i = 0;
+	while (resul[i] != NULL)
+	{
+		printf("%s\n", resul[i]);
+		i++;
+	}
+} */

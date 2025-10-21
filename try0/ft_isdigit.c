@@ -6,15 +6,15 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 10:14:27 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/16 12:31:55 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/20 18:58:37 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if (( c >= '0' && c <= '9'))
+	if ((c >= '0' && c <= '9'))
 		return (1);
 	else
 		return (0);

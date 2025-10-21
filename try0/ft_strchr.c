@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 14:58:43 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/20 15:10:09 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/21 11:22:34 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;	
+	int	i;
 
 	i = 0;
-	while(s[i])
+	while ((unsigned char)s[i])
 	{
-		if(s[i] == c)
+		if ((unsigned char)s[i] == (unsigned char)c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	if(c == '\0')
-		 return ((char *)&s[i]);
-	return NULL;
-
+	if ((unsigned int)c == '\0')
+		return ((char *)&s[i]);
+	return (NULL);
 }

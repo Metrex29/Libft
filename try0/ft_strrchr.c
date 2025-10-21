@@ -6,23 +6,24 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 14:58:43 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/20 14:44:09 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/21 11:24:17 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int		i;
+	size_t	j;
 
-	size_t punt = ft_strlen(s);
-	i = punt;
+	j = ft_strlen(s);
+	i = j;
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if ((unsigned char)s[i] == (unsigned char)c)
 			return ((char *)&s[i]);
 		i--;
 	}
-	return NULL;
+	return (NULL);
 }
