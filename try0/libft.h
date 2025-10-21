@@ -6,14 +6,13 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:00:28 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/21 10:58:00 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/21 14:56:15 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
 # define LIBFT_H
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 
