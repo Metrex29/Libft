@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:44:56 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/22 12:34:24 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/22 15:00:24 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 static int	count_digits(long n)
 {
-	int count = 0;
+	int	count;
 
+	count = 0;
 	if (n <= 0)
 		count++;
 	while (n)
@@ -33,17 +34,17 @@ static void	put_end_start(char *s, int i, long n)
 	{
 		i--;
 		if (s[i] == '-')
-			break;
+			break ;
 		s[i] = n % 10 + '0';
 		n = n / 10;
 	}
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int count;
-	long num;
-	char *arr1;
+	int		count;
+	long	num;
+	char	*arr1;
 
 	num = n;
 	count = count_digits(n);
@@ -51,7 +52,7 @@ char *ft_itoa(int n)
 	if (!arr1)
 		return (NULL);
 	arr1[count] = '\0';
-	if(num == 0)
+	if (num == 0)
 		arr1[0] = '0';
 	if (n < 0)
 	{

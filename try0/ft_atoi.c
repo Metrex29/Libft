@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 10:27:42 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/20 18:53:59 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/22 15:43:57 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,12 @@ int	ft_atoi(const char *str)
 	}
 	return (result * value);
 }
+
+/* #include <stdio.h>
+
+int main(void)
+{
+    char arr1[] = "-12A";
+    printf("%d\n", ft_atoi(arr1));
+    return 0;
+} */

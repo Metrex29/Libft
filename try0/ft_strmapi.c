@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 09:26:47 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/21 14:48:51 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/22 15:06:37 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*new;
 
 	new = malloc(ft_strlen(s) + 1);
-	if(!new)
-		return NULL;
+	if (!new)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

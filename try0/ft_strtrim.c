@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 11:07:04 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/21 14:46:08 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/22 15:07:34 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end >= ini && ft_strchr (set, s1[end]))
 		end --;
 	arr_trim = malloc (end - ini +2);
-	if(!arr_trim)
-		return NULL;
+	if (!arr_trim)
+		return (NULL);
 	while (ini <= end)
 	{
 		arr_trim[j] = s1[ini];

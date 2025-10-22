@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 14:58:24 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/21 14:41:00 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/22 15:06:13 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ char	*ft_strdup(const char *string)
 	char	*arr;
 
 	i = 0;
-
 	len = ft_strlen (string);
 	arr = malloc (len + 1);
-	if(!arr)
-		return NULL;
+	if (!arr)
+		return (NULL);
 	while (string[i])
 	{
 		arr[i] = string[i];
