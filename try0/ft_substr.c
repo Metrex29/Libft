@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 16:25:25 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/21 14:43:19 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/22 11:42:53 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
+	if (!s)
+	return (NULL);
+	arr1 = ft_strlen (s);
+	if (start >= arr1)
+	len = 0;
+	if (len > arr1 - start)
+	len = arr1 - start;
 	p = malloc (len + 1);
 	if(!p)
-		return NULL;
-	arr1 = ft_strlen (s);
-	if (!s)
-		return (NULL);
-	if (start >= arr1)
-		len = 0;
-	if (len > arr1 - start)
-		len = arr1 - start;
+	return NULL;
 	while (i < start)
 		i++;
 	while (j < len && s[i])
