@@ -6,7 +6,7 @@
 #    By: raulp <raulp@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 14:34:45 by raulp             #+#    #+#              #
-#    Updated: 2025/10/22 14:53:52 by raulp            ###   ########.fr        #
+#    Updated: 2025/10/23 17:29:57 by raulp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME	=	libft.a
 SONAME	=	libft.so
 
-CC		=	gcc
+CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror -fPIC
 AR		=	ar
 ARFLAGS	=	rcs

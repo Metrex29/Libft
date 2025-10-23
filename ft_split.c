@@ -6,16 +6,16 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:36:09 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/22 15:05:16 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/23 15:48:49 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_word(char const *s, char c)
+static int count_word(char const *s, char c)
 {
-	int	count;
-	int	i;
+	int count;
+	int i;
 
 	i = 0;
 	count = 0;
@@ -33,11 +33,11 @@ static int	count_word(char const *s, char c)
 	return (count);
 }
 
-static char	*put_word(const char *s, char c)
+static char *put_word(const char *s, char c)
 {
-	int		len;
-	char	*word;
-	int		i;
+	int len;
+	char *word;
+	int i;
 
 	len = 0;
 	i = 0;
@@ -55,20 +55,20 @@ static char	*put_word(const char *s, char c)
 	return (word);
 }
 
-static void	free_split(char **resul, int j)
+static void free_split(char **resul, int j)
 {
 	while (j > 0)
 	{
 		j--;
-		free (resul[j]);
+		free(resul[j]);
 	}
-	free (resul);
+	free(resul);
 }
 
-static int	insert_words(char **resul, char const *s, char c)
+static int insert_words(char **resul, char const *s, char c)
 {
-	int	i;
-	int	j;
+	int i;
+	int j;
 
 	i = 0;
 	j = 0;
@@ -93,10 +93,10 @@ static int	insert_words(char **resul, char const *s, char c)
 	return (1);
 }
 
-char	**ft_split(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
-	char	**resul;
-	int		words;
+	char **resul;
+	int words;
 
 	if (!s)
 		return (NULL);
