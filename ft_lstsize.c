@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 16:10:58 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/23 18:58:04 by raulp            ###   ########.fr       */
+/*   Created: 2025/10/23 18:49:16 by raulp             #+#    #+#             */
+/*   Updated: 2025/10/23 19:00:23 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// minecart ---next---minecart
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*node;
-	
-	node = malloc(sizeof(t_list));
-	if(!node)
-		return (NULL);
-	
-	node -> content = content;
-	node -> next =  NULL;
-	return (node);
+	int	count;
+
+	count = 0;
+	while (lst)
+	{
+		count ++;
+		lst = lst -> next;
+	}
+	return (count);
 }

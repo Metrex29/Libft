@@ -6,7 +6,7 @@
 /*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:58:36 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/23 17:58:54 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/23 18:51:33 by raulp            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	
+	if (!lst || !new)
+		return ;
+	new -> next = *lst;
+	*lst = new;
 }
