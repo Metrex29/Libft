@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:00:28 by cpicon-m          #+#    #+#             */
-/*   Updated: 2025/10/24 07:13:13 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/24 14:47:10 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
-
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif

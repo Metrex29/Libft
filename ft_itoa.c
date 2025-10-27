@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raulp <raulp@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cpicon-m <cpicon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:44:56 by raulp             #+#    #+#             */
-/*   Updated: 2025/10/22 15:00:24 by raulp            ###   ########.fr       */
+/*   Updated: 2025/10/24 15:21:50 by cpicon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	count_digits(long n)
 {
@@ -28,13 +27,11 @@ static int	count_digits(long n)
 	return (count);
 }
 
-static void	put_end_start(char *s, int i, long n)
+static void	put_end_start(char *s, int i, long n, int start)
 {
-	while (i > 0)
+	while (i > start)
 	{
 		i--;
-		if (s[i] == '-')
-			break ;
 		s[i] = n % 10 + '0';
 		n = n / 10;
 	}
@@ -45,20 +42,23 @@ char	*ft_itoa(int n)
 	int		count;
 	long	num;
 	char	*arr1;
+	int		start;
 
 	num = n;
-	count = count_digits(n);
-	arr1 = malloc(count +1);
+	count = count_digits(num);
+	arr1 = malloc(count + 1);
 	if (!arr1)
 		return (NULL);
 	arr1[count] = '\0';
 	if (num == 0)
 		arr1[0] = '0';
+	start = 0;
 	if (n < 0)
 	{
 		arr1[0] = '-';
 		num = -num;
+		start = 1;
 	}
-	put_end_start(arr1, count, num);
+	put_end_start(arr1, count, num, start);
 	return (arr1);
 }
